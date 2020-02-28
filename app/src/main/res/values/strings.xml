@@ -1,0 +1,105 @@
+<resources>
+    <string name="app_name">MyWanAndroid</string>
+    <string name="reload_text">reload</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Click avatar login</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="new_tag">New</string>
+
+    <string name="top_tag">Top</string>
+
+    <string name="nav_settings">Settings</string>
+    <string name="nav_collect">collect</string>
+    <string name="page_home" >main_pager</string>
+    <string name="page_home_recommend" >recommend</string>
+    <string name="project">project</string>
+    <string name="navigation">navigation</string>
+    <string name="knowledge_hierarchy">PMBOK</string>
+    <string name="official_accounts">OA</string>
+    <string name="loading_view_text">loading…</string>
+    <string name="latest_project">latest_project</string>
+
+    <string name="signin">sign in</string>
+    <string name="signin_now">Complete registration and login</string>
+    <string name="sign_up">sign up</string>
+    <string name="landing">Landing....</string>
+    <string name="registered">sign up now....</string>
+    <string name="sign_out">sign out</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="username">user name</string>
+    <string name="password">Password</string>
+    <string name="repassword">Confirm Password</string>
+    <string name="login_success">login success!</string>
+    <string name="login_fail">login fail！！！</string>
+    <string name="login_out_positive_text">Logout</string>
+    <string name="login_out_negative_text">Cancel</string>
+    <string name="login_out_text">Is it sure that it is not slippery?</string>
+
+    <string name="passwordInconsistency">Two password inconsistency！</string>
+
+    <string name="collection_success">Collection success！</string>
+    <string name="collection_fail">Collection failed！</string>
+    <string name="cancle_collection_success">Cancel Collection success！</string>
+    <string name="cancle_collection_fail">Cancel Collection fail！</string>
+
+    <string name="not_load_more_msg">Brother, this time is really gone!</string>
+
+    <string name="search_key">search keyword</string>
+    <string name="hot_key_title">HotKey</string>
+    <string name="search_history">Search History</string>
+    <string name="search_result_failed">Search failed \(╯-╰)/</string>
+    <string name="clear_search_history">clear search history</string>
+    <string name="confirm_clera_search_history">Confirm clear all history?</string>
+    <string name="cancel_collection_text">Cancel Collection</string>
+    <string name="cancel_text">Cancel</string>
+    <string name="delete_collection_text">Deleting collection</string>
+    <string name="confirm_clear_cache_text">Determine to clear the cache?</string>
+    <string name="finish_clear_cache_text">Clear cache completed</string>
+    <string name="confirm_text">confirm</string>
+    <string name="own_collect">my collect</string>
+    <string name="common_web">common_web</string>
+    <string name="square_text">square</string>
+    <string name="exit_again">Exit the app again</string>
+    <string name="collection_article" >Collection Article</string>
+    <string name="collection_web" >Collection Web</string>
+    <string name="update_collection_web" >Update Collection Web</string>
+    <string name="delete_collection_web" >Delete Collection Web</string>
+    <string name="delete_article_success_text" >Delete Article Success！</string>
+    <string name="delete_article_text" >Delete Article</string>
+    <string name="collection_web_success" >Collection Web Success!</string>
+    <string name="update_collection_web_success" >Update Collection Web Success!</string>
+    <string name="add_collection" >Add Favorites</string>
+    <string name="add_collection_web" >Add Collection Web</string>
+    <string name="add_collection_article" >Add Collection Article</string>
+    <string name="collection_name_hint" >Please enter a title</string>
+    <string name="collection_author_hint" >Please enter the author</string>
+    <string name="collection_link_address_hint" >Please enter the link address</string>
+    <string name="collection_empty">Haven not added a collection yet，come and add one</string>
+    <string name="loading">Loading…</string>
+    <string name="load_failed">Load failed. click to retry!</string>
+    <string name="load_failed_no_network">Oops, network is lost!  click to retry</string>
+    <string name="empty">Empty!</string>
+    <string name="str_none" />
+
+    <string name="share_article_text">share article</string>
+
+    <string name="actionbar_webview_share">web share</string>
+    <string name="actionbar_webview_copy">web copy</string>
+    <string name="actionbar_webview_open">open web browser</string>
+    <string name="actionbar_webview_refresh">refresh</string>
+    <string name="action_share">share</string>
+
+    <string name="todo_text">TODO</string>
+    <string name="my_coin">Coin</string>
+    <string name="coin_rank_text">Points leaderboard</string>
+    <string name="coin_record_text">Coin Record</string>
+    <string name="coin_rule_text">Integral rule</string>
+    <string name="night_mode_text">Night mode</string>
+    <string name="clear_cache_text">Clear Cache</string>
+    <string name="about_us_text">About us</string>
+</resources>
