@@ -1,9 +1,9 @@
 package com.viger.myappframe.view.activity;
 
-import com.viger.myappframe.R;
-import com.viger.myappframe.base.BaseActivity;
 import com.viger.myappframe.presenter.MainPresenter;
 import com.viger.myappframe.view.contract.MainContract;
+import com.viger.myframe.R;
+import com.viger.myappframe.base.BaseActivity;
 
 public class MainActivity extends BaseActivity<MainPresenter> implements MainContract.MainView {
 

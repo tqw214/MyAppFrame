@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.activity.MainActivity">
+    tools:context="com.viger.myappframe.view.activity.MainActivity">
 
     <!--右侧主布局-->
     <include layout="@layout/app_bar_main"

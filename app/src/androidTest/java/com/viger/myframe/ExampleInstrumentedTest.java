@@ -1,4 +1,4 @@
-package com.viger.myappframe;
+package com.viger.myframe;
 
 import android.content.Context;
 
