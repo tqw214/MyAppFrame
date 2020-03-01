@@ -69,7 +69,6 @@ public abstract class BaseActivity<T extends BasePresenter> extends AppCompatAct
 
     /**
      * 其他 Activity 继承 BaseActivity 调用 performRequestPermissions 方法
-     *
      * @param desc        首次申请权限被拒绝后再次申请给用户的描述提示
      * @param permissions 要申请的权限数组
      * @param requestCode 申请标记值
@@ -180,8 +179,12 @@ public abstract class BaseActivity<T extends BasePresenter> extends AppCompatAct
                 if (mListener != null) {
                     mListener.onPermissionSuccess();
                 }
-            } else {// 用户拒绝申请权限
-                if (mListener != null) {
+            } else {
+                if (mListener != null && !shouldShowRequestPermissionRationale(permissions)) {
+                    // 用户拒绝并且点击不再显示
+                    goToSystemSettingActivity();
+                }else {
+                    // 用户普通拒绝申请权限
                     mListener.onPermissionFailed();
                 }
             }
@@ -204,26 +207,27 @@ public abstract class BaseActivity<T extends BasePresenter> extends AppCompatAct
 
     //权限申请失败引导用户去设置界面
     protected void goToSystemSettingActivity() {
-        Intent intent = new Intent();  intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-        Uri uri = Uri.fromParts("package", getPackageName(), null);
-        intent.setData(uri);
-        startActivity(intent);
-    }
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("提示")
+                .setMessage("为了更好的使用app，您需要同意一些权限，要去设置界面设置吗？")
+                .setPositiveButton("确认", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Intent intent = new Intent();  intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+                        Uri uri = Uri.fromParts("package", getPackageName(), null);
+                        intent.setData(uri);
+                        startActivity(intent);
+                    }
+                })
+                .setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                    }
+                })
+                .setCancelable(false)
+                .show();
 
-//    performRequestPermissions("我们需要获取权限",
-//                                      new String[]{
-//        Manifest.permission.WRITE_EXTERNAL_STORAGE},
-//            100, new PermissionsResultListener() {
-//        @Override
-//        public void onPermissionSuccess() {
-//            Toast.makeText(MainActivity.this, "权限申请成功,开始写入文件", Toast.LENGTH_SHORT).show();
-//            todoSomething();
-//        }
-//
-//        @Override
-//        public void onPermissionFailed() {
-//            Toast.makeText(MainActivity.this, "权限申请失败", Toast.LENGTH_SHORT).show();
-//        }
-//    });
+    }
 
 }
