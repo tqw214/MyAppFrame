@@ -36,6 +36,12 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+        //这是自定义的 buildType，继承自 debug
+        /*jnidebug {
+            initWith debug
+            applicationIdSuffix ".jnidebug"
+            jniDebuggable true
+        }*/
     }
 
     //设置打包格式
@@ -71,13 +77,20 @@ android {
     productFlavors {
         xiaomi {
             manifestPlaceholders = [UMENG_CHANNEL_VALUE: "xiaomi"]
+            applicationId "com.viger.myappframe.xiaomi"
+            versionName "1.0-mi"
         }
         baidu {
             manifestPlaceholders = [UMENG_CHANNEL_VALUE: "baidu"]
+            applicationId "com.viger.myappframe.baidu"
+            versionName "1.0-du"
         }
-        wandoujia {
-            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "wandoujia"]
-        }
+//        free {
+//            dimension "default"
+//            applicationIdSuffix ".free"
+//            versionNameSuffix "-free"
+//            buildConfigField "String", "NAME", "\"免费版\""
+//        }
     }
 
 //    productFlavors.all { flavor ->
