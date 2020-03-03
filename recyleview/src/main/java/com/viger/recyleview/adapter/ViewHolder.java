@@ -5,11 +5,10 @@ import android.util.SparseArray;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.recyclerview.widget.RecyclerView;
 
 /**
- * Created by Darren on 2016/12/28.
- * Email: 240336124@qq.com
  * Description: RecyclerView的ViewHolder
  */
 public class ViewHolder extends RecyclerView.ViewHolder {

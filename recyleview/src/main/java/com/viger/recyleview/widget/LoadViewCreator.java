@@ -5,8 +5,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
- * Created by Darren on 2017/1/3.
- * Email: 240336124@qq.com
  * Description: 上拉加载更多的辅助类为了匹配所有效果
  */
 

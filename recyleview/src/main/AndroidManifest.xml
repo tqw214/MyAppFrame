@@ -2,13 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.viger.recyleview">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
@@ -18,8 +17,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".BasicUseActivity"></activity>
-        <activity android:name=".CommonAdapterActivity"></activity>
+
+        <activity android:name=".basicUse.BasicUseActivity"
+            android:theme="@style/AppTheme"
+            />
+        <activity android:name=".commonAdapterUse.CommonAdapterActivity" />
+        <activity android:name=".dragItemAnimatorUse.DragItemAnimatorActivity" />
+        <activity android:name=".headerFooterUse.HeaderFooterActivity" />
+        <activity android:name=".refreshLoad.RefreshLoadActivity"/>
     </application>
 
 </manifest>

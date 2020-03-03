@@ -1,4 +1,4 @@
-package com.viger.recyleview.widget;
+package com.viger.recyleview.commonAdapterUse;
 
 import android.graphics.Canvas;
 import android.graphics.Rect;
@@ -7,6 +7,9 @@ import android.view.View;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+/**
+ * Description: RecyclerView 分割线定制
+ */
 public class CategoryItemDecoration extends RecyclerView.ItemDecoration {
     private Drawable mDivider;
 

@@ -1,8 +1,6 @@
-package com.viger.recyleview.listener;
+package com.viger.recyleview.adapter;
 
 /**
- * Created by Darren on 2016/12/28.
- * Email: 240336124@qq.com
  * Description:  多布局支持接口
  */
 public interface MultiTypeSupport<T> {

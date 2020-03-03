@@ -1,4 +1,4 @@
-package com.viger.recyleview.widget;
+package com.viger.recyleview.basicUse;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -9,9 +9,9 @@ import android.view.View;
 
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.RecyclerView.LayoutParams;
 
 public class DividerGridItemDecoration extends RecyclerView.ItemDecoration {
+
     private Drawable mDivider;
     private int[] attrs = new int[]{
             android.R.attr.listDivider
@@ -34,7 +34,7 @@ public class DividerGridItemDecoration extends RecyclerView.ItemDecoration {
         int childCount = parent.getChildCount();
         for (int i = 0; i < childCount; i++) {
             View child = parent.getChildAt(i);
-            RecyclerView.LayoutParams params = (LayoutParams) child.getLayoutParams();
+            RecyclerView.LayoutParams params = (RecyclerView.LayoutParams) child.getLayoutParams();
             int left = child.getLeft() - params.leftMargin;
             int right = child.getRight() + params.rightMargin + mDivider.getIntrinsicWidth();
             int top = child.getBottom() + params.bottomMargin;
@@ -49,7 +49,7 @@ public class DividerGridItemDecoration extends RecyclerView.ItemDecoration {
         int childCount = parent.getChildCount();
         for (int i = 0; i < childCount; i++) {
             View child = parent.getChildAt(i);
-            RecyclerView.LayoutParams params = (LayoutParams) child.getLayoutParams();
+            RecyclerView.LayoutParams params = (RecyclerView.LayoutParams) child.getLayoutParams();
             int left = child.getRight() + params.rightMargin;
             int right = left + mDivider.getIntrinsicWidth();
             int top = child.getTop() - params.topMargin;
@@ -66,7 +66,7 @@ public class DividerGridItemDecoration extends RecyclerView.ItemDecoration {
         int right = mDivider.getIntrinsicWidth();
         int bottom = mDivider.getIntrinsicHeight();
 
-        int position = ((LayoutParams) view.getLayoutParams()).getViewLayoutPosition();
+        int position = ((RecyclerView.LayoutParams) view.getLayoutParams()).getViewLayoutPosition();
 
         if (isLastColumn(position, parent)) {// 是否是最后一列
             right = 0;

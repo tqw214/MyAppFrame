@@ -1,20 +1,22 @@
-package com.viger.recyleview;
+package com.viger.recyleview.commonAdapterUse;
 
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.google.gson.Gson;
-import com.viger.recyleview.adapter.CategoryListAdapter;
-import com.viger.recyleview.bean.ChannelListResult;
-import com.viger.recyleview.listener.OnItemClickListener;
-import com.viger.recyleview.widget.CategoryItemDecoration;
+import com.viger.recyleview.R;
+import com.viger.recyleview.adapter.OnViewItemClickListener;
+
 import java.io.IOException;
 import java.util.List;
+
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.OkHttpClient;
@@ -22,9 +24,9 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 /**
- * 万能Adapter基本使用
+ * Description:  万能Adapter基本使用
  */
-public class CommonAdapterActivity extends AppCompatActivity implements OnItemClickListener {
+public class CommonAdapterActivity extends AppCompatActivity implements OnViewItemClickListener {
 
     private RecyclerView mRecyclerView;
     private OkHttpClient mOkHttpClient;
@@ -115,5 +117,4 @@ public class CommonAdapterActivity extends AppCompatActivity implements OnItemCl
     public void onItemClick(int position) {
         Toast.makeText(this, "" + mData.get(position).getName(), Toast.LENGTH_SHORT).show();
     }
-
 }

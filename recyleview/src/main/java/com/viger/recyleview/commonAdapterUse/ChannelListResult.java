@@ -1,8 +1,13 @@
-package com.viger.recyleview.bean;
+package com.viger.recyleview.commonAdapterUse;
 
 import java.util.List;
 
+/**
+ * Description:
+ */
+
 public class ChannelListResult {
+
     private String message;
     private DataBean data;
 

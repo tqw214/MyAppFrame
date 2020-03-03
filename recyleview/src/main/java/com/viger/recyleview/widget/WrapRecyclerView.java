@@ -3,18 +3,15 @@ package com.viger.recyleview.widget;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
-
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.viger.recyleview.listener.OnItemClickListener;
+import com.viger.recyleview.adapter.OnViewItemClickListener;
+import com.viger.recyleview.adapter.OnViewLongClickListener;
 
 /**
- * 可以添加头部和底部的RecyclerView
+ * Description: 可以添加头部和底部的RecyclerView
  */
 public class WrapRecyclerView extends RecyclerView {
-
     // 包裹了一层的头部底部Adapter
     private WrapRecyclerAdapter mWrapRecyclerAdapter;
     // 这个是列表数据的Adapter
@@ -23,46 +20,53 @@ public class WrapRecyclerView extends RecyclerView {
     // 增加一些通用功能
     // 空列表数据应该显示的空View
     // 正在加载数据页面，也就是正在获取后台接口页面
-    private View mEmptyView;
-    private View mLoadingView;
+    private View mEmptyView, mLoadingView;
 
-    public WrapRecyclerView(@NonNull Context context) {
+    public WrapRecyclerView(Context context) {
         super(context);
     }
 
-    public WrapRecyclerView(@NonNull Context context, @Nullable AttributeSet attrs) {
+    public WrapRecyclerView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public WrapRecyclerView(@NonNull Context context, @Nullable AttributeSet attrs, int defStyle) {
+    public WrapRecyclerView(Context context, @Nullable AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     }
 
     @Override
-    public void setAdapter(@Nullable Adapter adapter) {
+    public void setAdapter(Adapter adapter) {
         // 为了防止多次设置Adapter
-        if(mAdapter != null) {
+        if (mAdapter != null) {
             mAdapter.unregisterAdapterDataObserver(mDataObserver);
             mAdapter = null;
         }
+
         this.mAdapter = adapter;
-        if(adapter instanceof WrapRecyclerAdapter) {
+
+        if (adapter instanceof WrapRecyclerAdapter) {
             mWrapRecyclerAdapter = (WrapRecyclerAdapter) adapter;
-        }else {
+        } else {
             mWrapRecyclerAdapter = new WrapRecyclerAdapter(adapter);
         }
+
         super.setAdapter(mWrapRecyclerAdapter);
+
         // 注册一个观察者
         mAdapter.registerAdapterDataObserver(mDataObserver);
+
         // 解决GridLayout添加头部和底部也要占据一行
         mWrapRecyclerAdapter.adjustSpanSize(this);
+
         // 加载数据页面
         if (mLoadingView != null && mLoadingView.getVisibility() == View.VISIBLE) {
             mLoadingView.setVisibility(View.GONE);
         }
+
         if (mItemClickListener != null) {
             mWrapRecyclerAdapter.setOnItemClickListener(mItemClickListener);
         }
+
         if (mLongClickListener != null) {
             mWrapRecyclerAdapter.setOnLongClickListener(mLongClickListener);
         }
@@ -174,11 +178,12 @@ public class WrapRecyclerView extends RecyclerView {
      * Adapter数据改变的方法
      */
     private void dataChanged() {
-        if(mAdapter.getItemCount() == 0) {
-            if(mEmptyView != null) {
-                mEmptyView.setVisibility(View.VISIBLE);
-            }else {
-                mEmptyView.setVisibility(View.GONE);
+        if (mAdapter.getItemCount() == 0) {
+            // 没有数据
+            if (mEmptyView != null) {
+                mEmptyView.setVisibility(VISIBLE);
+            } else {
+                mEmptyView.setVisibility(GONE);
             }
         }
     }
@@ -186,21 +191,22 @@ public class WrapRecyclerView extends RecyclerView {
     /***************
      * 给条目设置点击和长按事件
      *********************/
-    public OnItemClickListener mItemClickListener;
-    public com.viger.recyleview.listener.OnLongClickListener mLongClickListener;
-    public void setOnItemClickListener(OnItemClickListener itemClickListener) {
+    public OnViewItemClickListener mItemClickListener;
+    public OnViewLongClickListener mLongClickListener;
+
+    public void setOnItemClickListener(OnViewItemClickListener itemClickListener) {
         this.mItemClickListener = itemClickListener;
+
         if (mWrapRecyclerAdapter != null) {
             mWrapRecyclerAdapter.setOnItemClickListener(mItemClickListener);
         }
     }
 
-    public void setOnLongClickListener(com.viger.recyleview.listener.OnLongClickListener longClickListener) {
+    public void setOnLongClickListener(OnViewLongClickListener longClickListener) {
         this.mLongClickListener = longClickListener;
+
         if (mWrapRecyclerAdapter != null) {
             mWrapRecyclerAdapter.setOnLongClickListener(mLongClickListener);
         }
     }
-
-
 }

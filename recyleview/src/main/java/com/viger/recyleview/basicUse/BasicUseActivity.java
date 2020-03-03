@@ -1,4 +1,4 @@
-package com.viger.recyleview;
+package com.viger.recyleview.basicUse;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -9,41 +9,46 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.viger.recyleview.widget.DividerGridItemDecoration;
+
+import com.viger.recyleview.R;
 import com.viger.recyleview.widget.WrapRecyclerView;
+
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * recycle基本使用
+ * Description:  RecyclerView基本使用
  */
-public class BasicUseActivity extends AppCompatActivity {
 
+public class BasicUseActivity extends AppCompatActivity {
     private WrapRecyclerView mRecyclerView;
     private List<String> mDatas;
     private HomeAdapter mAdapter;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler_view);
+
         initData();
+
         mRecyclerView = (WrapRecyclerView) findViewById(R.id.recycler_view);
         mAdapter = new HomeAdapter(this, mDatas);
+
         mRecyclerView.setLayoutManager(new GridLayoutManager(this, 3));
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.addItemDecoration(new DividerGridItemDecoration(this));
+
         // 设置item动画
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
     }
 
-    private void initData() {
+    protected void initData() {
         mDatas = new ArrayList<String>();
         for (int i = 'A'; i < 'z'; i++) {
             mDatas.add("" + (char) i);
@@ -69,8 +74,7 @@ public class BasicUseActivity extends AppCompatActivity {
         return true;
     }
 
-
-    private class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> {
+    class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> {
 
         private List<String> mDatas;
         private LayoutInflater mInflater;
@@ -108,5 +112,4 @@ public class BasicUseActivity extends AppCompatActivity {
             }
         }
     }
-
 }

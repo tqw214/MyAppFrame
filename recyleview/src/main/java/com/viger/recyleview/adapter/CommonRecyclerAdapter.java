@@ -7,13 +7,13 @@ import android.view.ViewGroup;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.viger.recyleview.listener.MultiTypeSupport;
-import com.viger.recyleview.listener.OnItemClickListener;
-import com.viger.recyleview.listener.OnLongClickListener;
-
 import java.util.List;
 
+/**
+ * Description: 通用的Adapter
+ */
 public abstract class CommonRecyclerAdapter<T> extends RecyclerView.Adapter<ViewHolder> {
+
     protected Context mContext;
     protected LayoutInflater mInflater;
     //数据怎么办？
@@ -103,14 +103,14 @@ public abstract class CommonRecyclerAdapter<T> extends RecyclerView.Adapter<View
     /***************
      * 给条目设置点击和长按事件
      *********************/
-    public OnItemClickListener mItemClickListener;
-    public OnLongClickListener mLongClickListener;
+    public OnViewItemClickListener mItemClickListener;
+    public OnViewLongClickListener mLongClickListener;
 
-    public void setOnItemClickListener(OnItemClickListener itemClickListener) {
+    public void setOnItemClickListener(OnViewItemClickListener itemClickListener) {
         this.mItemClickListener = itemClickListener;
     }
 
-    public void setOnLongClickListener(OnLongClickListener longClickListener) {
+    public void setOnLongClickListener(OnViewLongClickListener longClickListener) {
         this.mLongClickListener = longClickListener;
     }
 }

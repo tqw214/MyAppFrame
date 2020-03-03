@@ -1,8 +1,8 @@
-package com.viger.recyleview.listener;
+package com.viger.recyleview.adapter;
 
 /**
  * Description: Adapter条目的长按事件
  */
-public interface OnLongClickListener {
+public interface OnViewLongClickListener {
     public boolean onLongClick(int position);
 }

@@ -1,24 +1,22 @@
-package com.viger.recyleview.adapter;
+package com.viger.recyleview.commonAdapterUse;
 
 import android.content.Context;
 import android.text.Html;
 import android.view.View;
 
 import com.viger.recyleview.R;
-import com.viger.recyleview.bean.ChannelListResult;
-import com.viger.recyleview.utils.GlideImageLoader;
+import com.viger.recyleview.adapter.CommonRecyclerAdapter;
+import com.viger.recyleview.adapter.ViewHolder;
 
 import java.util.List;
 
 /**
- * Created by Darren on 2016/12/28.
- * Email: 240336124@qq.com
  * Description: 利用万能通用的Adapter改造后的列表
  */
 public class CategoryListAdapter extends CommonRecyclerAdapter<ChannelListResult.DataBean.CategoriesBean.CategoryListBean> {
 
     public CategoryListAdapter(Context context, List<ChannelListResult.DataBean.
-                CategoriesBean.CategoryListBean> datas) {
+            CategoriesBean.CategoryListBean> datas) {
         super(context, datas, R.layout.channel_list_item);
     }
 

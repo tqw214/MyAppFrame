@@ -1,10 +1,11 @@
-package com.viger.recyleview.utils;
+package com.viger.recyleview.commonAdapterUse;
 
 import android.content.Context;
 import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.viger.recyleview.R;
 import com.viger.recyleview.adapter.ViewHolder;
+
 
 public class GlideImageLoader extends ViewHolder.HolderImageLoader {
 
