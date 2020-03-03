@@ -5,11 +5,14 @@ import android.os.Bundle;
 import android.view.View;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.viger.recyleview.basicUse.BasicUseActivity;
 import com.viger.recyleview.commonAdapterUse.CommonAdapterActivity;
 import com.viger.recyleview.dragItemAnimatorUse.DragItemAnimatorActivity;
 import com.viger.recyleview.headerFooterUse.HeaderFooterActivity;
 import com.viger.recyleview.refreshLoad.RefreshLoadActivity;
+import com.viger.recyleview.wannengadapter.RecyclerViewUniversalAdapter;
 import com.viger.recyleview.xrecylerview.XRecyclerViewActivity;
 
 public class MainActivity extends AppCompatActivity {
