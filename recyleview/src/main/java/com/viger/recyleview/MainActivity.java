@@ -10,6 +10,7 @@ import com.viger.recyleview.commonAdapterUse.CommonAdapterActivity;
 import com.viger.recyleview.dragItemAnimatorUse.DragItemAnimatorActivity;
 import com.viger.recyleview.headerFooterUse.HeaderFooterActivity;
 import com.viger.recyleview.refreshLoad.RefreshLoadActivity;
+import com.viger.recyleview.xrecylerview.XRecyclerViewActivity;
 
 public class MainActivity extends AppCompatActivity {
     @Override
@@ -42,4 +43,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, RefreshLoadActivity.class);
         startActivity(intent);
     }
+
+    public void doXRecyclerView(View view) {
+        Intent intent = new Intent(this, XRecyclerViewActivity.class);
+        startActivity(intent);
+    }
+
 }

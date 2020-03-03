@@ -63,4 +63,15 @@
         android:onClick="dragItemAnimator"
         android:layout_margin="10dp"
         android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_marginTop="58dp"
+        android:layout_width="match_parent"
+        android:text="XRecyclerView"
+        android:textAllCaps="false"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:onClick="doXRecyclerView"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content" />
 </LinearLayout>
