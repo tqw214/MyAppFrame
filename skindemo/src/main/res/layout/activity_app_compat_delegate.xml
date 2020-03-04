@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor">
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:layout_alignParentLeft="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="我的消息"
+        android:textColor="@color/colorAccent"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:id="@+id/tv_book"
+        android:layout_alignLeft="@id/tv_message"
+        android:layout_below="@id/tv_message"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:layout_alignParentLeft="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:text="我的书籍"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:id="@+id/tv_money"
+        android:layout_alignLeft="@id/tv_message"
+        android:layout_below="@id/tv_book"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:layout_alignParentLeft="true"
+        android:layout_width="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:layout_height="wrap_content"
+        android:text="我的金币"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:id="@+id/tv_market"
+        android:layout_alignLeft="@id/tv_message"
+        android:layout_below="@id/tv_money"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:layout_alignParentLeft="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:text="图书市场"
+        android:textSize="25sp"/>
+
+    <RelativeLayout
+        android:layout_alignLeft="@id/tv_message"
+        android:layout_below="@id/tv_market"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp">
+        <TextView
+            android:id="@+id/tv_mode"
+            android:gravity="center"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="夜间模式"
+            android:textColor="@color/colorAccent"
+            android:textSize="25sp"/>
+
+    </RelativeLayout>
+</RelativeLayout>
