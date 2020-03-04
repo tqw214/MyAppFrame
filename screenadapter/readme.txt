@@ -1,3 +1,31 @@
+1、屏幕分辨率适配方法
+原理：通过分辨率按比例缩放
+步骤:设置设计图的尺寸数据，然后运行com.viger.screenadapter.plan_one包下的 GenerateValueFiles类中的main方法，
+将会在src/main/res/目录下生成各种分辨率（可配置分辨率）的values文件夹
+使用：直接按照设计图中的px在xml中引用dimen数值即可。
+
+2、屏幕最小dp宽度适配方法
+原理：通过dp按比例缩放
+步骤：安装module根目录下的插件ScreenMatch.jar插件，然后在任意目录点击右键-ScreenMatch，选中当前module，即可在
+src/main/res/目录下生成一系列类似values-sw600dp的文件夹。
+使用：在xml中按照dp来设置，按照ui设计图dp标志或者自己计算，计算方式：
+例如设计如720px，按照360dp设计，如果一个按钮长200px,则对应的dp=720px/360dp=系数2(1dp=2px)
+所有200px的按钮dp=200/2=100dp
+
+3、今日头条适配方式
+原理：通过修改density系数，达到按比例放大px=dp*density
+步骤:引入开源库：implementation 'me.jessyan:autosize:1.2.0'
+https://github.com/JessYanCoding/AndroidAutoSize/blob/master/README-zh.md
+在AndroidManifest.xml中添加：单位dp
+<!--720-1280-->
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="320"/>
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="640"/>
+
+
 Android 屏幕适配 使用蓝湖解决屏幕适配问题
 1.蓝湖官网：
 https://lanhuapp.com/
@@ -31,3 +59,4 @@ px 单位的设计图：叫 UI 设计师标注为 dp 单位或跟她要 psd 源�
 因为横屏时宽高变化太大，想要横屏时也能完全适配，那就只能让设计师出一套横屏的设计图，然后单独写一套横屏的布局文件。
 
 GitHub:https://github.com/wildma/ScreenAdaptation
+
