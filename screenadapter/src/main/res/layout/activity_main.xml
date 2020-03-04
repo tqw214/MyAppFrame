@@ -7,6 +7,22 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+
+    <!--第2种最小宽度适配-->
+    <Button
+        android:layout_width="@dimen/dp_160"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="按钮1"/>
+
+    <Button
+        android:layout_width="@dimen/dp_160"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:text="按钮2"/>
+
+    <!--第一种分辨率适配
     <Button
         android:layout_width="@dimen/x360"
         android:layout_height="wrap_content"
@@ -19,5 +35,6 @@
         android:layout_marginTop="20dp"
         android:textSize="20sp"
         android:text="按钮2"/>
+    -->
 
 </LinearLayout>

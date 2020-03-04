@@ -6,6 +6,8 @@ import java.io.FileOutputStream;
 import java.io.PrintWriter;
 
 /**
+ * 第一种屏幕适配方式：采用【屏幕分辨率限定符】
+ *
  * 屏幕px适配工具类
  * 自动生成values各分辨率文件夹
  * 执行main方式即可
