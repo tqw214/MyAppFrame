@@ -35,8 +35,10 @@ public class StatusBarUtils {
     private static void addStatusBar(Activity act, int color) {
         int resource = act.getResources().getColor(color);
         View statusBar = createStatusBar(act, resource);
+        //root是个LinearLayout，里面包裹了我们设置的布局
         ViewGroup root  = act.findViewById(android.R.id.content);
         if(null != root ) {
+            //将生成的statusBar追加到布局的头部
             root.addView(statusBar,0);
         }
     }
