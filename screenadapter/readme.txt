@@ -8,6 +8,7 @@
 原理：通过dp按比例缩放
 步骤：安装module根目录下的插件ScreenMatch.jar插件，然后在任意目录点击右键-ScreenMatch，选中当前module，即可在
 src/main/res/目录下生成一系列类似values-sw600dp的文件夹。
+配置：project根目录会生成screenMatch.properties配置文件，里面可以配置需要生成的屏幕dp宽度值。
 使用：在xml中按照dp来设置，按照ui设计图dp标志或者自己计算，计算方式：
 例如设计如720px，按照360dp设计，如果一个按钮长200px,则对应的dp=720px/360dp=系数2(1dp=2px)
 所有200px的按钮dp=200/2=100dp
