@@ -1,3 +1,9 @@
+此工程包含：
+1、屏幕适配3种方案
+2、沉浸式透明状态栏解决方案
+
+
+
 1、屏幕分辨率适配方法
 原理：通过分辨率按比例缩放
 步骤:设置设计图的尺寸数据，然后运行com.viger.screenadapter.plan_one包下的 GenerateValueFiles类中的main方法，
