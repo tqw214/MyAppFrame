@@ -11,12 +11,16 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/annotation" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/compiler" />
             <option value="$PROJECT_DIR$/dagger" />
             <option value="$PROJECT_DIR$/hotfix" />
             <option value="$PROJECT_DIR$/ipc" />
+            <option value="$PROJECT_DIR$/plugindemo" />
             <option value="$PROJECT_DIR$/recyleview" />
             <option value="$PROJECT_DIR$/screenadapter" />
+            <option value="$PROJECT_DIR$/sdkversionadapter" />
             <option value="$PROJECT_DIR$/skindemo" />
           </set>
         </option>
