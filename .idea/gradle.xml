@@ -16,6 +16,7 @@
             <option value="$PROJECT_DIR$/compiler" />
             <option value="$PROJECT_DIR$/dagger" />
             <option value="$PROJECT_DIR$/hotfix" />
+            <option value="$PROJECT_DIR$/imageloader" />
             <option value="$PROJECT_DIR$/ipc" />
             <option value="$PROJECT_DIR$/plugindemo" />
             <option value="$PROJECT_DIR$/recyleview" />
